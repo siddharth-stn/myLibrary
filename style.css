@@ -1,3 +1,150 @@
-body {
-    color: red;
+* {
+    margin: 0px;
+    padding: 0px;
 }
+
+body {
+    background-color: #CFD8DC;
+}
+
+header {
+    padding-top: 15px;
+    background-color: #03DAC6;
+    text-align: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+header p {
+    padding: 5px;
+    padding-left: 7px;
+    padding-right: 7px;
+    margin-right: 255px;
+    display: inline-block;
+    border-top: white 1px solid;
+    border-right: white 1px solid;
+    border-left: white 1px solid;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.25em;
+    color: white;
+}
+
+p>a {
+    text-decoration: none;
+    color: white;
+}
+
+.form-div {
+    margin: auto;
+    margin-top: 49px;
+    color: black;
+    background-color: white;
+    padding: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 73%;
+}
+
+.form {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item-div {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.margin-top-for-fixed-header {
+    margin-top: 49px;
+}
+
+.submit-btn {
+    font-size: 1em;
+    padding-left: 2.5px;
+    padding-right: 2.5px;
+}
+
+.hidden-elem {
+    margin: 0px;
+    padding: 0px;
+    height: 0px;
+    width: 0px;
+    z-index: -1;
+}
+
+main {
+    width: 80%;
+    background-color:  #A1887F;
+    margin: auto;
+    text-align: center;
+    height: 100vh;
+    margin-bottom: 40px;
+}
+
+main h1 {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: #FAFAFA;
+}
+
+.container-div {
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid black 1px;
+    margin: auto;
+    width: 80%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 3px;
+    column-gap: 30px;
+    row-gap: 35px;
+    margin-bottom: 40px;
+}
+
+.card {
+    color: white;
+    background-color: #6A1B9A;
+    border-radius: 3px;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card p {
+    padding-bottom: 10px;
+}
+
+.read-button {
+    width: 90px;
+    margin: auto;
+}
+
+.title {
+    font-size: 1.3em;
+    font-style: bold;
+}
+
+footer {
+    background-color: #2E7D32;
+    position: fixed;
+    bottom: 0px;
+    overflow: hidden;
+    height: 40px;
+    width: 100%;
+}
+

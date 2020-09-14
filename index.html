@@ -7,7 +7,26 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <h1>Hello<h1>
+    <header>
+        <p><a href="#"  id="newBookBtn">Add New Book</a></p>
+    </header>
+    <div class="form-div hidden">
+        <div action="submit" class="form">
+            <div class="form-item-div"><label for="title">Title of Book:&nbsp;&nbsp;</label><input type="text" id="title"></div>
+            <div class="form-item-div"><label for="author">Author Name:&nbsp;&nbsp;</label><input type="text" id="author"></div>
+            <div class="form-item-div"><label for="pages">Number of Pages:&nbsp;&nbsp;</label><input type="text" id="pages"></div>
+            <div><button class="submit-btn">Submit</button></div>
+        </div>
+    </div>
+    <main class="margin-top-for-fixed-header ">
+        <h1>My Collection</h1>
+        <div class="container-div">
+        </div>
+        <p id="newPara"></p>
+    </main>
+    
+    <footer>
+    </footer>
     <script src="../library.js"></script>
 </body>
 </html>
