@@ -37,6 +37,7 @@ submitBtn.addEventListener("click", () => {
    let pagesPara = document.createElement("p");
    let readPara = document.createElement("p");
    let toggleReadBtn = document.createElement("button");
+   let removebtn = document.createElement("button");
    let counterPara = document.createElement("p");
 
 
@@ -46,6 +47,7 @@ submitBtn.addEventListener("click", () => {
    pagesPara.classList.add("pages");
    readPara.classList.add("read");
    toggleReadBtn.classList.add("read-button");
+   removebtn.classList.add("remove-btn");
    counterPara.classList.add("hidden-elem");
 
    titlePara.appendChild(document.createTextNode(title.value));
@@ -54,6 +56,7 @@ submitBtn.addEventListener("click", () => {
    let readNode = document.createTextNode("Not Read");
    readPara.appendChild(readNode);
    toggleReadBtn.innerHTML = "Toggle Read";
+   removebtn.innerHTML = "Remove";
    counterPara.appendChild(document.createTextNode(counter));
 
    cardDiv.appendChild(counterPara);
@@ -62,6 +65,7 @@ submitBtn.addEventListener("click", () => {
    cardDiv.appendChild(pagesPara);
    cardDiv.appendChild(readPara);
    cardDiv.appendChild(toggleReadBtn);
+   cardDiv.appendChild(removebtn);
    containerDiv.appendChild(cardDiv);
 
    formDiv.classList.add("hidden");
@@ -72,7 +76,7 @@ submitBtn.addEventListener("click", () => {
 document.addEventListener("click", (e) => {
    let parentElement = e.target.parentElement;
    let readElem = parentElement.childNodes;
-   if (parentElement.classList == "card") {
+   if (parentElement.classList == "card" && e.target.classList == "read-button") {
     let index = readElem[0].innerHTML;
     index = Number(index);
     //document.getElementById("newPara").appendChild(document.createTextNode(index));
@@ -83,6 +87,9 @@ document.addEventListener("click", (e) => {
             readElem[4].innerHTML = "I have read this";
             myLibrary[index].read = "I have read this";
         }
+    } else if (parentElement.classList == "card" && e.target.classList == "remove-btn") {
+        let superParent = parentElement.parentNode;
+        superParent.removeChild(parentElement);
     }
 });
 

@@ -4,12 +4,12 @@
 }
 
 body {
-    background-color: #CFD8DC;
+    background-color: darkslategray;
 }
 
 header {
     padding-top: 15px;
-    background-color: #03DAC6;
+    background-color: firebrick;
     text-align: right;
     position: fixed;
     top: 0;
@@ -40,7 +40,7 @@ p>a {
     margin: auto;
     margin-top: 49px;
     color: black;
-    background-color: white;
+    background-color: grey;
     padding: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -82,7 +82,7 @@ p>a {
 
 main {
     width: 80%;
-    background-color:  #A1887F;
+    background-color:  darkolivegreen;
     margin: auto;
     text-align: center;
     height: 100vh;
@@ -101,7 +101,7 @@ main h1 {
     border: solid black 1px;
     margin: auto;
     width: 80%;
-    background-color: white;
+    background-color:darkgoldenrod;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 30px;
@@ -115,7 +115,7 @@ main h1 {
 
 .card {
     color: white;
-    background-color: #6A1B9A;
+    background-color: darkslategray;
     border-radius: 3px;
     padding: 10px;
     padding-top: 5px;
@@ -132,6 +132,11 @@ main h1 {
 .read-button {
     width: 90px;
     margin: auto;
+    margin-bottom: 10px;
+}
+.remove-btn {
+    width: 90px;
+    margin: auto;
 }
 
 .title {
@@ -140,7 +145,7 @@ main h1 {
 }
 
 footer {
-    background-color: #2E7D32;
+    background-color: firebrick;
     position: fixed;
     bottom: 0px;
     overflow: hidden;
