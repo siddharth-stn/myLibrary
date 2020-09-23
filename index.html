@@ -27,6 +27,29 @@
     
     <footer>
     </footer>
-    <script src="../library.js"></script>
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAfS0ZwNj-mfgaFB5Iypz5iQCu5myTNcAc",
+        authDomain: "mylibrary-stn.firebaseapp.com",
+        databaseURL: "https://mylibrary-stn.firebaseio.com",
+        projectId: "mylibrary-stn",
+        storageBucket: "mylibrary-stn.appspot.com",
+        messagingSenderId: "221365679558",
+        appId: "1:221365679558:web:dc09f80d659e39c4492ec7"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="../libraryWithDb.js"></script>
 </body>
 </html>

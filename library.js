@@ -1,5 +1,15 @@
-
 let myLibrary = [];
+
+var database = firebase.database();
+
+function writeUserData(counter, title, author, totPages, read) {
+    database.ref('Book/' + counter).set({
+      title: title,
+      author: author,
+      totPages : totPages,
+      read: read
+    });
+  }
 
 function Book (title, author, totPages, read) {
     this.title = title;
@@ -7,9 +17,6 @@ function Book (title, author, totPages, read) {
     this.totPages = totPages;
     this.read = read;
 };
-
-const harry = new Book('Harry Potter', "J.K. Rowling", 295, true);
-const pichai = new Book("Sundar Pichai", "google", 251, false);
 
 let newBookBtn = document.getElementById("newBookBtn");
 let formDiv = document.querySelector(".form-div");
@@ -30,6 +37,7 @@ submitBtn.addEventListener("click", () => {
 
     myLibrary[counter] = new Book(title.value, author.value, pages.value, "Not Read");
     
+    writeUserData(counter, title.value, author.value, pages.value,"Not Read");
 
    let cardDiv = document.createElement("div");
    let titlePara = document.createElement("p");
