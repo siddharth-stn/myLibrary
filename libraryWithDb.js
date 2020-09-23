@@ -210,7 +210,7 @@ document.addEventListener("click", (e) => {
         console.log(titleFind);
         console.log(superParent);
 
-        database.ref('Book/').once('value', snapShot => {
+        database.ref('Book/').on('value', snapShot => {
             snapShot.forEach(childSnapShot => {
                 let key = childSnapShot.key;
                 let title = childSnapShot.val().title;
