@@ -222,10 +222,5 @@ document.addEventListener("click", (e) => {
         });
 
         superParent.removeChild(parentElement);
-        
-        body.onload = function onLoad () {
-            console.log("</br>load function was run</br>");
-            getData(addDataToGui); 
-        }
     }
 });
