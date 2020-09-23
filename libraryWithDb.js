@@ -210,7 +210,7 @@ document.addEventListener("click", (e) => {
         console.log(titleFind);
         console.log(superParent);
 
-        database.ref('Book/').on('value', snapShot => {
+        database.ref('Book/').once('value', snapShot => {
             snapShot.forEach(childSnapShot => {
                 let key = childSnapShot.key;
                 let title = childSnapShot.val().title;
@@ -224,7 +224,6 @@ document.addEventListener("click", (e) => {
         superParent.removeChild(parentElement);
         
         body.onload = function onLoad () {
-
             console.log("</br>load function was run</br>");
             getData(addDataToGui); 
         }
