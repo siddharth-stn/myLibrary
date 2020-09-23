@@ -222,5 +222,6 @@ document.addEventListener("click", (e) => {
         });
 
         superParent.removeChild(parentElement);
+        body.onload();
     }
 });
