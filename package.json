@@ -1,0 +1,21 @@
+{
+  "name": "mylibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "library.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/siddharth-stn/myLibrary.git"
+  },
+  "author": "Siddharth Pande <sidarjunstn.sp@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/siddharth-stn/myLibrary/issues"
+  },
+  "dependencies": {
+    "firebase": "^8.4.2"
+  }
+}
