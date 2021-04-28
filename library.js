@@ -1,3 +1,26 @@
+const firebase = require("firebase");
+
+firebase.initializeApp({
+  apiKey: "AIzaSyDeL8DKbAVIdWisVYi6Po29_8jBxyQSSKc",
+  authDomain: "mylibrary-sid.firebaseapp.com",
+  projectId: "mylibrary-sid",
+});
+
+const db = firebase.firestore();
+
+db.collection("users").add({
+  first: "Ada",
+  last: "Lovelace",
+  born: 1815
+}).
+then((ref) => {
+  console.log("document written with id: ", ref.id);
+})
+.catch((error) => {
+  console.error("Error adding document: ", error);
+});
+
+
 let myLibrary = [];
 
 function Book(title, author, totPages, read) {
@@ -29,7 +52,6 @@ submitBtn.addEventListener("click", () => {
     pages.value,
     "Not Read"
   );
-
 
   let cardDiv = document.createElement("div");
   let titlePara = document.createElement("p");

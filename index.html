@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Library</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header>
-        <p><a href="#"  id="newBookBtn">Add New Book</a></p>
+      <p><a href="#" id="newBookBtn">Add New Book</a></p>
     </header>
     <div class="form-div hidden">
-        <div action="submit" class="form">
-            <div class="form-item-div"><label for="title">Title of Book:&nbsp;&nbsp;</label><input type="text" id="title"></div>
-            <div class="form-item-div"><label for="author">Author Name:&nbsp;&nbsp;</label><input type="text" id="author"></div>
-            <div class="form-item-div"><label for="pages">Number of Pages:&nbsp;&nbsp;</label><input type="text" id="pages"></div>
-            <div><button class="submit-btn">Submit</button></div>
+      <div action="submit" class="form">
+        <div class="form-item-div">
+          <label for="title">Title of Book:&nbsp;&nbsp;</label
+          ><input type="text" id="title" />
         </div>
+        <div class="form-item-div">
+          <label for="author">Author Name:&nbsp;&nbsp;</label
+          ><input type="text" id="author" />
+        </div>
+        <div class="form-item-div">
+          <label for="pages">Number of Pages:&nbsp;&nbsp;</label
+          ><input type="text" id="pages" />
+        </div>
+        <div><button class="submit-btn">Submit</button></div>
+      </div>
     </div>
-    <main class="margin-top-for-fixed-header ">
-        <h1>My Collection</h1>
-        <div class="container-div">
-        </div>
-        <p id="newPara"></p>
+    <main class="margin-top-for-fixed-header">
+      <h1>My Collection</h1>
+      <div class="container-div"></div>
+      <p id="newPara"></p>
     </main>
-    <footer>
-    </footer>
+    <footer></footer>
+    <script>
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyDeL8DKbAVIdWisVYi6Po29_8jBxyQSSKc",
+        authDomain: "mylibrary-sid.firebaseapp.com",
+        projectId: "mylibrary-sid",
+        storageBucket: "mylibrary-sid.appspot.com",
+        messagingSenderId: "358486562254",
+        appId: "1:358486562254:web:b279af56e2ce375cad479f",
+        measurementId: "G-Z4ELVTWXV5",
+      };
+    </script>
     <script src="./library.js"></script>
-</body>
+  </body>
 </html>
