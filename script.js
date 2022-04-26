@@ -6,16 +6,30 @@ let shelf = document.querySelector(".shelf");
 
 let myLibrary = [];
 
-function Books(title, author, pages, read = "not read") {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+
+class Books {
+    constructor(title, author, pages, read="not read") {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
+
+    info() {
+        return (`${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`);
+    }
 }
 
-Books.prototype.info = function () {
-    return (`${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`);
-}
+// function Books(title, author, pages, read = "not read") {
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+// }
+
+// Books.prototype.info = function () {
+//     return (`${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`);
+// }
 
 function addBookToLibrary(title, author, pages, read) {
     myLibrary.push(new Books(title, author, pages, read));
