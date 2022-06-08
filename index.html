@@ -19,15 +19,15 @@
         <form class="showForm">
             <fieldset>
                 <h2>Add New Book</h2>
-                <input type="text" class="title" placeholder="Enter Book Title">
-                <input type="text" class="author" placeholder="Enter Author Name">
-                <input type="tel" class="pages" placeholder="No of Pages in Book">
+                <input type="text" class="title"  placeholder="Enter Book Title" required name="title">
+                <input type="text" class="author" placeholder="Enter Author Name" required name="author">
+                <input type="number" min="1" max="5000" class="pages" placeholder="No of Pages in Book" required name="pages">
                 <select name="read" class="read">
                     <option value="READ">READ</option>
                     <option value="NOT READ" selected>NOT READ</option>
                 </select>
                 <div class="submitBtnDiv">
-                    <button type="button" class="submitBtn"/>Submit</button>
+                    <button type="submit" class="submitBtn">Submit</button>
                 </div>
             </fieldset>
         </form>

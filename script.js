@@ -3,6 +3,7 @@ let addBookBtn = document.querySelector(".addBook");
 let addBookForm = document.querySelector("form");
 let submitBtn = document.querySelector(".submitBtn");
 let shelf = document.querySelector(".shelf");
+let form = document.querySelector(".showForm");
 
 let myLibrary = [];
 
@@ -72,20 +73,54 @@ addBookBtn.addEventListener('click', () => {
     addBookForm.classList.toggle('hidden');
 });
 
-submitBtn.addEventListener('click', () => {
-    let title = document.querySelector(".title").value;
-    let author = document.querySelector(".author").value;
-    let pages = document.querySelector(".pages").value;
+submitBtn.addEventListener('click', (event) => {
+
+    let title = document.querySelector(".title");
+    let author = document.querySelector(".author");
+    let pages = document.querySelector(".pages");
     let read = document.querySelector(".read").value;
-    if ((title != "") && (author != "") && (pages != "")) {
-        addBookToLibrary(title, author, pages, read);
+
+    if (title.validity.valueMissing) {
+        title.setCustomValidity("This is a required field!");
+        title.reportValidity();
+    } else {
+        title.setCustomValidity("");
+    }
+    
+    if (author.validity.valueMissing) {
+        author.setCustomValidity("This is a required field!");
+        author.reportValidity();
+    } else {
+        author.setCustomValidity("");
+    }
+
+    if (!pages.checkValidity()) {
+        if (pages.validity.valueMissing) {
+            pages.setCustomValidity("This is a required field!");
+            pages.reportValidity();
+        } else if (pages.validity.rangeOverflow) {
+            pages.setCustomValidity("No. of Pages can not be greater than 5000!");
+            pages.reportValidity();
+        } else if (pages.validity.rangeUnderflow) {
+            pages.setCustomValidity("No. of Pages can not be less than 1!");
+            pages.reportValidity();
+        } else {
+            pages.setCustomValidity("");
+        }
+    }
+
+    //submit data if everything checks out to be correct ------> 
+    if ((title.checkValidity()) && (author.checkValidity()) && pages.checkValidity()) {
+        addBookToLibrary(title.value, author.value, pages.value, read.value);
         showBooks();
+        addBookForm.classList.toggle('hidden');
         document.querySelector(".title").value = "";
         document.querySelector(".author").value = "";
         document.querySelector(".pages").value = "";
-        addBookForm.classList.toggle('hidden');
     }
 });
+
+
 
 
 pageBody.addEventListener('click', (e) => {
