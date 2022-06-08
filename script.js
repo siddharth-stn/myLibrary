@@ -73,13 +73,14 @@ addBookBtn.addEventListener('click', () => {
     addBookForm.classList.toggle('hidden');
 });
 
-submitBtn.addEventListener('click', (event) => {
+submitBtn.addEventListener('click', () => {
 
     let title = document.querySelector(".title");
     let author = document.querySelector(".author");
     let pages = document.querySelector(".pages");
     let read = document.querySelector(".read").value;
-
+    
+    //Custom Validity Added to the form elements ----->
     if (title.validity.valueMissing) {
         title.setCustomValidity("This is a required field!");
         title.reportValidity();
